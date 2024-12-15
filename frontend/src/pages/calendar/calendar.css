@@ -1,0 +1,160 @@
+/* Global Styles */
+.participation-body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f1f1f1;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+
+.participation-body header {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.participation-body h1 {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #333;
+}
+
+.participation-body main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 1;
+    margin: 0 20px;
+}
+
+/* Existing Styles */
+#calendrier {
+    background: #f8f6f6;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 40%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-header h2 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.days,
+.dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    margin-top: 10px;
+}
+
+.days div {
+    font-weight: bold;
+    color: #333;
+}
+
+.dates div {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 2px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    transition: background-color 0.2s ease;
+    position: relative;
+}
+
+.dates div:hover {
+    background-color: #e0e0e0;
+}
+
+.star {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    clip-path: polygon(
+            50% 0%,
+            61% 35%,
+            98% 35%,
+            68% 57%,
+            79% 91%,
+            50% 70%,
+            21% 91%,
+            32% 57%,
+            2% 35%,
+            39% 35%
+    );
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.star.yellow {
+    background-color: gold;
+}
+
+.star.gray {
+    background-color: gray;
+}
+
+#details-evenement {
+    background: #888787;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 35%;
+    text-align: center;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#details-evenement img {
+    width: 40%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+#details-evenement button {
+    width: 50%;
+    max-width: 200px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#details-evenement button:hover {
+    background-color: #0056b3;
+}

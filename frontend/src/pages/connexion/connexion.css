@@ -1,0 +1,101 @@
+/* Fond flou */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(95, 95, 96, 0.5);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Fenêtre modale */
+  .modal {
+    background: #f3f1fa;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    max-width: 90%;
+    position: relative;
+    text-align: center;
+  }
+  
+  /* Bouton pour fermer */
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .close-button:hover {
+    color: red;
+  }
+  
+  /* Espacement entre les éléments du formulaire */
+  form > div {
+    margin-bottom: 20px;
+  }
+  
+  /* Style uniforme pour les champs d'entrée */
+  input[type="email"],
+  input[type="password"],
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  /* Container de mot de passe */
+  .password-container {
+    position: relative;
+  }
+  
+  .password-container input {
+    padding-right: 40px;
+  }
+  
+  /* Icône dans le champ de mot de passe */
+  .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+  }
+  
+  /* Bouton de soumission */
+  button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  .error-message {
+    color: rgb(255, 0, 0);
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+  }

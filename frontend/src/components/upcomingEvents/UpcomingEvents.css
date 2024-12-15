@@ -1,0 +1,67 @@
+.UpcomingEvents_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px; /* Limite la largeur totale */
+    margin: auto;
+}
+.UpcomingEvents_container img{
+    width: 300px;
+    height: 300px;
+    border-radius: 8px;/*coins arrodi*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);/*effet d'ombre*/
+}
+@media screen and (max-width:667px){
+    .MuiButtonBase-root.MuiTab-root.MuiTab-textColorPrimary{
+        font-size: 12px !important;
+        padding: 5px !important;
+    }
+    .UpcomingEvents_container img {
+        width: 100%; /* Les images prennent la largeur disponible */
+        max-width: 150px; /* Limite la largeur maximale */
+        height: auto; /* Ajuste automatiquement la hauteur */
+    }
+}
+/* Conteneur principal pour chaque image */
+.img-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    overflow: hidden; /* Empêche le contenu de dépasser le conteneur */
+    border-radius: 8px; /* Coins arrondis */
+}
+
+/* Style de l'image */
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajuste l'image sans déformer */
+    transition: all 0.3s ease-in-out; /* Transition fluide pour l'effet */
+}
+
+/* Description cachée par défaut */
+.img-container .description {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7); /* Fond sombre semi-transparent */
+    padding: 10px;
+    border-radius: 8px;
+    opacity: 0; /* Description masquée par défaut */
+    transition: opacity 0.3s ease-in-out; /* Transition pour l'apparition */
+    text-align: center;
+    z-index: 1; /* Priorité pour afficher au-dessus de l'image */
+}
+
+/* Effet lorsque le curseur est sur l'image */
+.img-container:hover img {
+    filter: blur(5px); /* L'image devient floue */
+}
+
+.img-container:hover .description {
+    opacity: 1; /* La description apparaît */
+}

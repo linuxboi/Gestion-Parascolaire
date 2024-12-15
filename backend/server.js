@@ -3,6 +3,11 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const routes = require('./routes/routestest'); // Import routes
+const forumRoutes = require ('./routes/forumRoutes')
+const connexionRoutes = require ('./routes/connexionRoutes')
+const eventsRoutes = require ('./routes/eventsRoutes')
+const calendarRoutes = require ('./routes/calendarRoutes')
+const clubsRoutes = require('./routes/clubsRoutes');
 require('dotenv').config();
 
 const app = express();
@@ -29,6 +34,23 @@ mongoose.connect(process.env.MONGO_URI, {
 
 // Use the imported routes
 app.use(routes);
+
+
+// Utilisation de la route de connexion
+app.use("/api", connexionRoutes);
+
+// Utiliser les routes du forum
+app.use("/api", forumRoutes);
+
+
+//utiliser les routes des evenements
+app.use("/api", eventsRoutes);
+
+//utiliser les routes pour le calendrier
+app.use("/api", calendarRoutes);
+
+//utiliser les routes des clubs
+app.use("/api", clubsRoutes);
 
 // Set the port and listen
 const PORT = process.env.PORT || 4000;
