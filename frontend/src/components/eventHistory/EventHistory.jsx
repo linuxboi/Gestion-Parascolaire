@@ -15,7 +15,7 @@ export default function EventHistory() {
       return;
     }
 
-    fetch('http://localhost:4000/api/evenements', {
+    fetch('https://gestion-parascolaire.vercel.app//api/evenements', {
       headers: {
         Authorization: `Bearer ${token}`, // Pass the token in headers
       },
@@ -70,7 +70,7 @@ const EventHistory = () => {
       return;
     }
 
-    fetch('http://localhost:4000/api/evenements', {
+    fetch('https://gestion-parascolaire.vercel.app//api/evenements', {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -95,7 +95,7 @@ const EventHistory = () => {
         items.map((item) => (
           <div className="img-container" key={item.id}>
             <img 
-              src={`http://localhost:4000${item.image}`} 
+              src={`https://gestion-parascolaire.vercel.app/${item.image}`} 
               alt={`Image ${item.id}`} 
             />
             <div className="description">{item.titre} - {item.date} <br /> {item.description}</div>
@@ -119,7 +119,7 @@ const UpcomingEvents = () => {
       return;
     }
 
-    fetch('http://localhost:4000/api/evenements', {
+    fetch('https://gestion-parascolaire.vercel.app//api/evenements', {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -144,7 +144,7 @@ const UpcomingEvents = () => {
         items.map((item) => (
           <div className="img-container" key={item.id}>
             <img 
-              src={`http://localhost:4000${item.image}`} 
+              src={`https://gestion-parascolaire.vercel.app/${item.image}`} 
               alt={`Image ${item.id}`} 
             />
             <div className="description">{item.titre} - {item.date} <br /> {item.description}</div>

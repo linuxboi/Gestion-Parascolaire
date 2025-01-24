@@ -26,7 +26,7 @@ const OtherClubs = (filteredClubs) => {
       }
 
       try {
-        const response = await fetch('http://localhost:4000/api/clubs', {
+        const response = await fetch('https://gestion-parascolaire.vercel.app//api/clubs', {
           headers: {
             Authorization: `Bearer ${token}`,
           },

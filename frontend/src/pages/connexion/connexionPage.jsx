@@ -15,7 +15,7 @@ const Connexion = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:4000/api/connexion", {
+      const response = await axios.post("https://gestion-parascolaire.vercel.app//api/connexion", {
         email,
         motDePasse,
       });

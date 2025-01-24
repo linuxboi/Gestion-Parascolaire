@@ -19,7 +19,7 @@ const Profil = () => {
     const fetchData = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get("http://localhost:4000/api/profil", {
+        const response = await axios.get("https://gestion-parascolaire.vercel.app//api/profil", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setUserData(response.data);
@@ -36,7 +36,7 @@ const Profil = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.put(
-        "http://localhost:4000/api/profil/updatePassword",
+        "https://gestion-parascolaire.vercel.app//api/profil/updatePassword",
         {
           motDePasseActuel,
           nouveauMotDePasse,
@@ -59,7 +59,7 @@ const Profil = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.put(
-        "http://localhost:4000/api/profil/upload",
+        "https://gestion-parascolaire.vercel.app//api/profil/upload",
         formData,
         {
           headers: {
