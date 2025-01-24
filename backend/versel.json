@@ -1,0 +1,20 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "server.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "server.js"
+      }
+    ],
+    "env": {
+      "MONGO_URI": "mongodb+srv://zakariaziko:SBLljtgds4Y07zvy@cluster0.wfdf7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+      "JWT_SECRET": "secret"
+    }
+  }
+  
