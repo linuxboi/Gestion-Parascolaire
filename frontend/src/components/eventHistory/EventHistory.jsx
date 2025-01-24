@@ -15,7 +15,7 @@ export default function EventHistory() {
       return;
     }
 
-    fetch('https://gestion-parascolaire.vercel.app//api/evenements', {
+    fetch('https://gestion-parascolaire.vercel.app/api/evenements', {
       headers: {
         Authorization: `Bearer ${token}`, // Pass the token in headers
       },
@@ -70,7 +70,7 @@ const EventHistory = () => {
       return;
     }
 
-    fetch('https://gestion-parascolaire.vercel.app//api/evenements', {
+    fetch('https://gestion-parascolaire.vercel.app/api/evenements', {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -119,7 +119,7 @@ const UpcomingEvents = () => {
       return;
     }
 
-    fetch('https://gestion-parascolaire.vercel.app//api/evenements', {
+    fetch('https://gestion-parascolaire.vercel.app/api/evenements', {
       headers: {
         Authorization: `Bearer ${token}`,
       },

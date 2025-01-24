@@ -19,7 +19,7 @@ const ImageGrid = () => {
   useEffect(() => {
     const fetchPublications = async () => {
       try {
-        const response = await axios.get('https://gestion-parascolaire.vercel.app//api/publications', {
+        const response = await axios.get('https://gestion-parascolaire.vercel.app/api/publications', {
           headers: {
             Authorization: `Bearer ${token}`, // Pass the token in headers
           },
@@ -41,7 +41,7 @@ const ImageGrid = () => {
     try {
       if (existingReactionIndex !== -1) {
         // Si la réaction existe déjà, on la retire
-        await axios.delete(`https://gestion-parascolaire.vercel.app//api/publications/${publicationId}/react`, {
+        await axios.delete(`https://gestion-parascolaire.vercel.app/api/publications/${publicationId}/react`, {
           headers: {
             Authorization: `Bearer ${token}`, // Pass the token in headers
           },
@@ -51,7 +51,7 @@ const ImageGrid = () => {
         console.log(`Removed ${type} from publication`);
       } else {
         // Sinon, on ajoute la nouvelle réaction
-        await axios.post(`https://gestion-parascolaire.vercel.app//api/publications/${publicationId}/react`, { type }, {
+        await axios.post(`https://gestion-parascolaire.vercel.app/api/publications/${publicationId}/react`, { type }, {
           headers: {
             Authorization: `Bearer ${token}`, // Pass the token in headers
           },
@@ -100,7 +100,7 @@ const ImageGrid = () => {
   const handleAddComment = async () => {
     if (newComment && selectedPublication) {
       try {
-        await axios.post(`https://gestion-parascolaire.vercel.app//api/publications/${selectedPublication._id}/comments`, { texte: newComment }, {
+        await axios.post(`https://gestion-parascolaire.vercel.app/api/publications/${selectedPublication._id}/comments`, { texte: newComment }, {
           headers: {
             Authorization: `Bearer ${token}`, // Pass the token in headers
           },

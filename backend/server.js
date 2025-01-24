@@ -15,7 +15,7 @@ const app = express();
 
 // Enable CORS for all origins or for specific origins
 app.use(cors({
-  origin: 'https://storied-brigadeiros-93cb76.netlify.app/', // Allow only your frontend's domain
+  origin: 'https://guileless-salamander-105101.netlify.app', // Allow only your frontend's domain
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify allowed HTTP methods
   allowedHeaders: ['Content-Type', 'Authorization'], // Specify allowed headers
   preflightContinue: false, // Don't pass the preflight response to the next handler

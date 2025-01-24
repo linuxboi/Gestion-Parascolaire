@@ -14,7 +14,7 @@ export default function UpcomingEvents() {
       return;
     }
 
-    fetch('https://gestion-parascolaire.vercel.app//api/evenements', {
+    fetch('https://gestion-parascolaire.vercel.app/api/evenements', {
       headers: {
         Authorization: `Bearer ${token}`, // Pass the token in headers
       },
