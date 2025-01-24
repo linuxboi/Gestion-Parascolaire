@@ -1,5 +1,5 @@
 const Etudiant = require("../models/etudiant");
-const bcrypt = require("bcrypt");
+
 const express = require("express");
 const jwt = require("jsonwebtoken");
 const authMiddleware = require('../middlewares/auth'); 
