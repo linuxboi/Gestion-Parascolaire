@@ -12,7 +12,7 @@ const UserManagement = () => {
   // Create a new user
   const createUser = async () => {
     try {
-      const response = await fetch("https://gestion-parascolaire.vercel.app/users", {
+      const response = await fetch("https://gestion-parascolaire.onrender.com/users", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -31,7 +31,7 @@ const UserManagement = () => {
   // Fetch all users
   const fetchUsers = async () => {
     try {
-      const response = await fetch("https://gestion-parascolaire.vercel.app/users");
+      const response = await fetch("https://gestion-parascolaire.onrender.com/users");
       if (!response.ok) throw new Error("Failed to fetch users");
       const data = await response.json();
       setUsers(data);

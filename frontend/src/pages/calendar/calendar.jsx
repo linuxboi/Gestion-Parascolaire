@@ -15,7 +15,7 @@ export default function EventParticipation() {
 
     const fetchEvents = async () => {
         try {
-            const response = await axios.get('https://gestion-parascolaire.vercel.app/api/events');
+            const response = await axios.get('https://gestion-parascolaire.onrender.com/api/events');
             console.log('Events:', response.data);
             
             const processedEvents = response.data.map(event => ({
@@ -121,7 +121,7 @@ export default function EventParticipation() {
         const token = localStorage.getItem('token');
         
         try {
-          const response = await fetch(`https://gestion-parascolaire.vercel.app/api/${eventId}/ajouter-participant`, {
+          const response = await fetch(`https://gestion-parascolaire.onrender.com/api/${eventId}/ajouter-participant`, {
             method: 'POST',
             headers: {
               
