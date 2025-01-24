@@ -10,6 +10,7 @@ import Navbar from './components/Navbar';
 import EventHistory from './components/EventHistory/EventHistory';
 import EventParticipation from './pages/calendar/calendar';
 import Events from './pages/events/events'
+import Profil from './pages/profilEtudiant/profilEtudiant';
 
 const App = () => {
   return (
@@ -25,7 +26,7 @@ const App = () => {
         <Route path="/calendar" element={<EventParticipation/>}/>
         <Route path="/clubs" element={<Clubs/>}/>
         <Route path="/events" element={<Events/>}/>
-       
+        <Route path="/profile" element={<Profil/>}/>
         
       </Routes>
     </Router>

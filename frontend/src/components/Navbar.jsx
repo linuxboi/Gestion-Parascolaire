@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import logo from "../assets/Histo3.jpeg";
 
 import { Home, Calendar, Users, CalendarDays, LogOut, GraduationCap, Settings, User } from "lucide-react";
 
@@ -55,7 +56,7 @@ const Navbar = () => {
             {/* Profile Image */}
             <div className="relative">
               <img
-                src={ "/avatar.png"} // Dynamically load profile image
+                src={ logo} // Dynamically load profile image
                 alt="Profile"
                 className="w-10 h-10 rounded-full object-cover border-2 border-gray-300 cursor-pointer"
                 onClick={toggleDashboard}

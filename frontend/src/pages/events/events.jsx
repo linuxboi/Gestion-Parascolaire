@@ -39,8 +39,8 @@ const events = () => {
             }}
           >
             <TabList onChange={handleChange} aria-label="Clubs Tabs">
-              <Tab label="HistoryEvents" value="1" />
-              <Tab label="UpcomingEvents" value="2" />
+              <Tab label="Historique des événements " value="1" />
+              <Tab label="Événements à venir" value="2" />
             </TabList>
           </Box>
 

@@ -8,6 +8,7 @@ const connexionRoutes = require ('./routes/connexionRoutes')
 const eventsRoutes = require ('./routes/eventsRoutes')
 const calendarRoutes = require ('./routes/calendarRoutes')
 const clubsRoutes = require('./routes/clubsRoutes');
+const profilEtudiantRoutes = require('./routes/profilEtudiantRoutes')
 require('dotenv').config();
 
 const app = express();
@@ -51,6 +52,9 @@ app.use("/api", calendarRoutes);
 
 //utiliser les routes des clubs
 app.use("/api", clubsRoutes);
+
+//utiliser les routes de profil de l etudiant
+app.use("/api", profilEtudiantRoutes);
 
 // Set the port and listen
 const PORT = process.env.PORT || 4000;
